@@ -17,5 +17,17 @@ class AccountSettingsVC: UIViewController {
     }
 
 
+    
+    
+    @IBAction func changePasswordPressed(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "CreatePassVC") as! CreatePassVC
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+        
+    }
+    
+    
 
 }

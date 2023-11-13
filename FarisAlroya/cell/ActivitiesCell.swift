@@ -12,12 +12,26 @@ class ActivitiesCell: UICollectionViewCell {
     
     @IBOutlet weak var selectedBtn: UIButton!
     @IBOutlet weak var mainView: UIView!
-    
     @IBOutlet weak var activityLabel: UILabel!
+    
+    var activity : Activity?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+    
+    
+    
 
+}
+
+protocol ActivityDelegate {
+    
+    func activityPressed(activity : Activity , flag : String , id : String)
+}
+
+
+struct Activity {
+    var activity : String
+    var selected : Bool
 }

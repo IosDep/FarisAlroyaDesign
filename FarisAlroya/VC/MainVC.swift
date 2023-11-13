@@ -12,16 +12,19 @@ class MianVC: UIViewController , UICollectionViewDelegate , UICollectionViewData
     
    
     @IBOutlet weak var userImage: UIImageView!
-        @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
    
-    
+    var reels : [VideoReel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.reels = [VideoReel(videoURL: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4") , VideoReel(videoURL: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4") ,   VideoReel(videoURL: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")]
+        
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.reloadData()
         
         collectionView.register(UINib(nibName: "VideoCell", bundle: nil), forCellWithReuseIdentifier: "VideoCell")
         
@@ -48,15 +51,15 @@ class MianVC: UIViewController , UICollectionViewDelegate , UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 12
+        return reels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
                     
             let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCell", for: indexPath) as? VideoCell
-            
+        
+        
                 
-            
             return cell!
             
             
@@ -65,15 +68,12 @@ class MianVC: UIViewController , UICollectionViewDelegate , UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-
         // collectionView.bounds.height
 
         let h = 220.0
         let w = 130.0
 
         return CGSize(width: w, height: h)
-
-
     }
     
     
@@ -81,6 +81,10 @@ class MianVC: UIViewController , UICollectionViewDelegate , UICollectionViewData
         
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        
+        vc.reels = self.reels
+        vc.index = indexPath.row
+        
         self.navigationController?.pushViewController(vc, animated: false)
         
     }
@@ -88,4 +92,9 @@ class MianVC: UIViewController , UICollectionViewDelegate , UICollectionViewData
     
     
 
+}
+
+
+struct VideoReel {
+    var videoURL : String
 }

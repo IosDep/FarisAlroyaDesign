@@ -14,7 +14,7 @@ class ActivitiesVC: UIViewController  , UICollectionViewDelegate , UICollectionV
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var ac : [String] = []
+    var activities : [Activity] = []
     
     
     override func viewDidLoad() {
@@ -27,9 +27,8 @@ class ActivitiesVC: UIViewController  , UICollectionViewDelegate , UICollectionV
         
         collectionView.register(UINib(nibName: "ActivitiesCell", bundle: nil), forCellWithReuseIdentifier: "ActivitiesCell")
         
-        self.ac = ["see" , "razannnsssss" , "razanazm"]
+        self.activities = [Activity(activity: "razan azmi", selected: false) , Activity(activity: "razannnsssA", selected: false) , Activity(activity: "r", selected: false) , Activity(activity: "raz", selected: false)]
         
-
         
     }
     
@@ -58,27 +57,36 @@ class ActivitiesVC: UIViewController  , UICollectionViewDelegate , UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return ac.count
+        return activities.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
                     
             let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "ActivitiesCell", for: indexPath) as? ActivitiesCell
         
-        cell?.activityLabel.text = ac[indexPath.row]
         
-        if indexPath.row == 1 {
+        if activities[indexPath.row].selected == true {
             
             cell?.selectedBtn.isHidden = false
             cell?.mainView.backgroundColor = UIColor(red: 0.93, green: 0.99, blue: 0.96, alpha: 1.00)
 
-                        
+            
         }
         
+        else {
+            
+            cell?.selectedBtn.isHidden = true
+            cell?.mainView.backgroundColor = .clear
+
+            
+        }
+        
+        cell?.activityLabel.text = activities[indexPath.row].activity ?? ""
+                
         let labelSize = cell?.activityLabel.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: cell?.activityLabel.frame.size.height ?? 50.0))
 
             // Update cell width constraint based on label size
-        cell?.contentView.frame.size.width = labelSize?.width ?? 150.0
+        cell?.contentView.frame.size.width = (labelSize?.width ?? 100.0)  + 10.0 ?? 150.0
                 
             
             return cell!
@@ -87,6 +95,22 @@ class ActivitiesVC: UIViewController  , UICollectionViewDelegate , UICollectionV
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if activities[indexPath.row].selected == false {
+            
+            activities[indexPath.row].selected = true
+
+        }
+        
+        else {
+            activities[indexPath.row].selected = false
+        }
+        
+        
+        collectionView.reloadData()
+        
+    }
     
     
     

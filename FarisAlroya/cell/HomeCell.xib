@@ -18,18 +18,7 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3D3-ki-Ptw">
                         <rect key="frame" x="20" y="11" width="1088" height="1786"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test2" translatesAutoresizingMaskIntoConstraints="NO" id="9SG-H0-2Ng">
-                                <rect key="frame" x="0.0" y="0.0" width="1088" height="1786"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="9SG-H0-2Ng" secondAttribute="bottom" id="8t9-W0-Sv1"/>
-                            <constraint firstItem="9SG-H0-2Ng" firstAttribute="leading" secondItem="3D3-ki-Ptw" secondAttribute="leading" id="beL-kM-Hhd"/>
-                            <constraint firstAttribute="trailing" secondItem="9SG-H0-2Ng" secondAttribute="trailing" id="fab-F1-c16"/>
-                            <constraint firstItem="9SG-H0-2Ng" firstAttribute="top" secondItem="3D3-ki-Ptw" secondAttribute="top" id="uS3-AN-rtO"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,10 +31,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="ZyO-7b-JIX"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="videoPlayerView" destination="3D3-ki-Ptw" id="uWV-L7-alo"/>
+            </connections>
             <point key="canvasLocation" x="-131.29770992366412" y="192.25352112676057"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="test2" width="430" height="632"/>
-    </resources>
 </document>
