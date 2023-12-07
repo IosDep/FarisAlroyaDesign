@@ -13,7 +13,7 @@ class PickerVC: UIViewController , UITableViewDataSource , UITableViewDelegate  
 
     @IBOutlet weak var tableView: UITableView!
     
-    var data = [PickerData]()
+    var data = [PickerDataModel]()
     var flag : Int?
     var pickerDelegate : PickerDelegate?
     
@@ -41,21 +41,9 @@ class PickerVC: UIViewController , UITableViewDataSource , UITableViewDelegate  
         
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "PickerCell", for: indexPath) as? PickerCell
-        
-        // nationality
-        
-        if flag == 1 {
-            
-        }
-        
-        
-        // gender
-        
-        if flag == 2 {
-            cell?.pickerLabel.text = data[indexPath.row].gender ?? ""
-
-        }
-        
+                
+       
+        cell?.pickerLabel.text = data[indexPath.row].name ?? ""
         
         
         return cell!
@@ -68,13 +56,20 @@ class PickerVC: UIViewController , UITableViewDataSource , UITableViewDelegate  
         
         if flag == 1 {
             
+            self.pickerDelegate?.getCountry(country: data[indexPath.row].name ?? "", flag: 1, id: data[indexPath.row].id ?? "")
         }
         
         // gender picker
         
         else if flag == 2 {
             
-            self.pickerDelegate?.getGender(gender: data[indexPath.row].gender, flag: "", id: "")
+            self.pickerDelegate?.getGender(gender: data[indexPath.row].name ?? "", flag: 2, id: data[indexPath.row].id ?? "")
+            
+        }
+        
+        else if flag == 3 {
+            
+            self.pickerDelegate?.getNationality(nat: data[indexPath.row].name ?? "", flag: 3, id: data[indexPath.row].id ?? "")
             
         }
         
@@ -90,12 +85,17 @@ class PickerVC: UIViewController , UITableViewDataSource , UITableViewDelegate  
 
 protocol PickerDelegate {
     
-    func getGender(gender : String , flag : String , id : String)
+    func getGender(gender : String , flag : Int , id : String)
+    func getNationality(nat : String , flag : Int , id : String)
+    func getCountry(country : String , flag : Int , id : String)
+
 }
 
 
 struct PickerData {
     
-    var gender : String
+    var name : String
+    var id : String
+    
     
 }

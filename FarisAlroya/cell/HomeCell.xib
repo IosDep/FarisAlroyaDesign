@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,16 +18,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3D3-ki-Ptw">
-                        <rect key="frame" x="20" y="11" width="1088" height="1786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1128" height="1808"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="3D3-ki-Ptw" secondAttribute="bottom" id="9Fw-Ae-EE9"/>
-                    <constraint firstItem="3D3-ki-Ptw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Eji-sz-aGc"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="3D3-ki-Ptw" secondAttribute="trailing" id="cTh-HI-EY7"/>
-                    <constraint firstItem="3D3-ki-Ptw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="lWa-8N-ukC"/>
+                    <constraint firstItem="3D3-ki-Ptw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bcq-aO-eTH"/>
+                    <constraint firstAttribute="bottom" secondItem="3D3-ki-Ptw" secondAttribute="bottom" id="le8-OR-8KR"/>
+                    <constraint firstItem="3D3-ki-Ptw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sof-GJ-Sp9"/>
+                    <constraint firstAttribute="trailing" secondItem="3D3-ki-Ptw" secondAttribute="trailing" id="u8E-Uw-H0r"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="ZyO-7b-JIX"/>

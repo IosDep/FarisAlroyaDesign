@@ -6,13 +6,94 @@
 //
 
 import UIKit
+import JGProgressHUD
+import Loaf
 
-class Extensions: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+extension UIViewController {
+    
+    
+    
+    func showErrorHud(msg: String , hud: JGProgressHUD) {
+        let hud = JGProgressHUD(style: .light)
+        hud.textLabel.text = msg
+        hud.indicatorView = JGProgressHUDErrorIndicatorView()
+        hud.show(in: self.view)
+        hud.dismiss(afterDelay: 1.5)
     }
+    
+    
+    func serverError(hud: JGProgressHUD) {
+        hud.indicatorView = JGProgressHUDErrorIndicatorView()
+        hud.textLabel.text = "Server Error".localized()
+        hud.dismiss(afterDelay: 1.5)
+    }
+
+    func showSuccessHud(msg: String, hud: JGProgressHUD) {
+        //        hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        //        hud.textLabel.text = msg
+        //        hud.dismiss(afterDelay: 1.5)
+        hud.dismiss(afterDelay: 3)
+        
+        Loaf(msg, state:
+                .custom(
+                    .init(
+                    backgroundColor:
+                        UIColor(red: 0.18, green: 0.80, blue: 0.44, alpha: 1.00) ,
+                    textColor: .white,
+                    tintColor: .white,
+                    font: UIFont(name: "din-regular", size: 10) ?? .systemFont(ofSize: 10),                    icon: Loaf.Icon.success,
+                    textAlignment: .natural,
+                    iconAlignment: .left ,
+                    width: .fixed(300))
+                ),
+             location: .top,
+             sender: self)
+             .show()    }
+    
+    func showWarningHud(msg: String, hud: JGProgressHUD) {
+        //        hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        //        hud.textLabel.text = msg
+        //        hud.dismiss(afterDelay: 1.5)
+        hud.dismiss(afterDelay: 3)
+        
+        Loaf(msg, state:
+                .custom(
+                    .init(
+                    backgroundColor:
+                        UIColor(red: 0.95, green: 0.77, blue: 0.06, alpha: 1.00),
+                    textColor: .white,
+                    tintColor: .white,
+                    font: UIFont(name: "din-regular", size: 14) ?? .systemFont(ofSize: 10),                    icon: Loaf.Icon.warning,
+                    textAlignment: .natural,
+                    iconAlignment: .left ,
+                    width: .fixed(300))
+                ),
+             location: .top,
+             sender: self)
+        .show()    }
+    
+    func showWarningHud(msg: String) {
+        //        hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        //        hud.textLabel.text = msg
+        //        hud.dismiss(afterDelay: 1.5)
+        
+        Loaf(msg, state:
+                .custom(
+                    .init(
+                    backgroundColor:
+                        UIColor(red: 0.95, green: 0.77, blue: 0.06, alpha: 1.00),
+                    textColor: .white,
+                    tintColor: .white,
+                    font: UIFont(name: "din-regular", size: 14) ?? .systemFont(ofSize: 10),                    icon: Loaf.Icon.warning,
+                    textAlignment: .natural,
+                    iconAlignment: .left ,
+                    width: .fixed(300))
+                ),
+             location: .top,
+             sender: self)
+        .show()    }
+    
  
 }
 

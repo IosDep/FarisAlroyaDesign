@@ -6,7 +6,7 @@
   
 */
 
-"Poet" = "شاعر";
+"Poet" = "مستخدم";
 "Guest" = "زائر";
 "Personal Information" = "بياناتك الشخصية";
 "Other Information" = "معلومات أخرى";
@@ -53,7 +53,7 @@
 "Forgot your password?" = "هل نسيت كلمة المرور؟" ;
 
 "Change password" = "تغيير كلمة المرور" ;
-"phone number \ email" = "الرقم او البريد الإلكتروني" ;
+"phone number / email" = "الرقم او البريد الإلكتروني" ;
 "Send Code" = "ارسل الرمز" ;
 "Create an account" = "إنشاء حساب" ;
 "Enter Code" = "ارسل الرمز" ;
@@ -89,3 +89,57 @@
 "Data panel" = "لوحة البيانات";
 "enter username / phone number" = "ادخل اسم المستخدم / رقم الموبايل";
 "username / phone number" = "اسم المستخدم / رقم الموبايل" ;
+"choose country" = "اختر بلد الإقامة";
+"welcome" = "أهلا بك";
+"Ypu don't have an account?Create an account" = "ما عندك حساب؟ إنشاء حساب";
+"username" = "اسم المستخدم";
+"password" = "كلمة المرور";
+"Do youhave an account?Sign in" = "هل لديك حساب؟ تسجيل دخول";
+"Gender:" = ":الجنس";
+"Birth date" = "تاريخ الميلاد";
+"Male" = "ذكر";
+"Female" = "أنثى";
+"I agree to the terms and conditions, and acknowledge that my use of this application is subject to compliance with the stated terms, policies and guidelines." = "أوافق على الشروط والأحكام، وأقر بأن استخدامي لهذا التطبيق يخضع للامتثال للشروط والسياسات والإرشادات المعلنة.";
+"Confirm account information" = "تأكيد معلومات الحساب";
+"Not now" = "ليس الآن";
+"Enter Account Info" = "ادخل معلومات الحساب";
+
+"Please confirm the code that sent to the mobile number" = "الرجاء تأكيد الرمز الذي تم إرساله إلى هاتفك المحمول ";
+
+"Enter Verification Code" = "ادخال رمز التحقق";
+"Create New Password" = "تعيين كلمة مرور الجديدة";
+"Follow" = "متابعة";
+"Unfollow" = "إلغاء متابعة";
+"Share Account" = "مشاركة الحساب";
+"Wallet" = "المحفظة والشحن" ;
+"Privacy and security" = "الخصوصية والأمن";
+"Account Control" = "التحكم بالحساب";
+"username" = "اسم المستخدم";
+"Gender" = "الجنس";
+"email" = "لابريد الإلكتروني";
+"Phone number" = "رقم الهاتف";
+"Your personal data is secured and is not shared to other applications" = "بياناتك الشخصية مؤمنة ولا تتم مشاركتها عبر التطبيقات";
+"Private Account" = "حساب خاص ";
+"Account Activity" = "نشاط الحساب";
+"block accounts" = "المحظورين";
+"Account security" = "" ;
+"change password" = "";
+"Two-factor authentication" = "";
+"Live" = "البث المباشر";
+"Videos" ="مقاطع ُفيديو";
+"Account settings" = "إعدادات الحساب";
+"Add information about your video.Maximum characters is 40,000 " = "اضف بعض المعلومات عن الفيديو الخاص بك
+اضف بعض المعلومات عن الفيديو الخاص بك
+الحد الاقصى 40000 حرف";
+"Choose activity type :" = "اختار نوع النشاط:";
+"Allow comments" = "السماح للتعليقات";
+"share with" = "شارك مع";
+"Upload" = "تحميل";
+"Draft" = "المسودة";
+"Likes" = "الاعجاب";
+"Comments" = "التعليقات";
+"Live Notifications" = "اشعارات البث المباشر";
+"Disable Live Notifications" ="ايقاف اشعارات البث المباشر";
+"Notifications" = "الإشعارات";
+"Followers" = "متابع";
+"Following" = "يتابع" ;

@@ -17,11 +17,13 @@ class WelcomePageVC: UIViewController {
 
     @IBAction func poetPressed(_ sender: Any) {
         
-        
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyBoard.instantiateViewController(withIdentifier: "Loginvc") as! Loginvc
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true)
     }
     
     

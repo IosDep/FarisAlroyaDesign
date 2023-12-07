@@ -239,7 +239,6 @@ class DesignableButton: UIButton {
         
             self.setTitle(NSLocalizedString(value, comment: ""), for: state)
             self.titleLabel?.font = UIFont(name: "din-regular", size: self.titleLabel?.font.pointSize ?? 17.0)
-
             
         }
     }

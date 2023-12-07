@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="din-next-lt-w23-bold.ttf">
+            <string>DINNextLTW23-Bold2</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="NotificationsHeader" id="iN0-l3-epB" customClass="NotificationsHeader" customModule="FarisAlroya" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="487" height="122"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اليوم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IY9-Xi-c6O">
+                    <rect key="frame" x="5" y="5" width="477" height="116"/>
+                    <fontDescription key="fontDescription" name="DINNextLTW23-Bold2" family="DIN Next LT W23" pointSize="14"/>
+                    <color key="textColor" red="0.16078431369999999" green="0.18823529410000001" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFs-4k-oWc">
+                    <rect key="frame" x="0.0" y="121" width="487" height="1"/>
+                    <color key="backgroundColor" red="0.4431372549" green="0.4823529412" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="3EG-hE-KEg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="IY9-Xi-c6O" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="1ZP-T6-B2O"/>
+                <constraint firstItem="IY9-Xi-c6O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="915-KI-pV6"/>
+                <constraint firstItem="oFs-4k-oWc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="A97-25-zAt"/>
+                <constraint firstItem="oFs-4k-oWc" firstAttribute="top" secondItem="IY9-Xi-c6O" secondAttribute="bottom" id="TJE-Vb-Zy9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IY9-Xi-c6O" secondAttribute="trailing" constant="5" id="Wyq-Af-H8W"/>
+                <constraint firstAttribute="bottom" secondItem="oFs-4k-oWc" secondAttribute="bottom" id="ocr-Qc-A03"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oFs-4k-oWc" secondAttribute="trailing" id="wzK-9O-is7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="60.305343511450381" y="276.76056338028172"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

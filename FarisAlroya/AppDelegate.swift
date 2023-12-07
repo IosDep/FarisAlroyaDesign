@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MOLH
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
-        
-        
+        MOLHLanguage.setDefaultLanguage("ar")
+//        MOLH.shared.activate(false)
+
+        if ((Helper.shared.getId()?.isEmpty) != nil){
+//            isLogin()
+        }else {
+//            notLogin()
+        }
         
         return true
     }
@@ -27,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func isLogin() {
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "TabBarVC")
+        let vc = storyBoard.instantiateViewController(withIdentifier: "CustomeTabBar")
         self.window?.rootViewController = vc
     }
     

@@ -17,11 +17,9 @@ class HomeVC: UIViewController , UITableViewDataSource , UITableViewDelegate {
     var index : Int?
     var player: AVPlayer?
 
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         self.tableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         
@@ -70,7 +68,7 @@ class HomeVC: UIViewController , UITableViewDataSource , UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return tableView.bounds.height
+        return self.tableView.frame.size.height
     }
 
 }
