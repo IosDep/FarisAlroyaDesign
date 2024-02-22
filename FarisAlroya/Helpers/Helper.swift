@@ -3,9 +3,9 @@ import Security
 
 
 final class Helper {
+    
     static let shared = Helper()
 
-    
     
     func saveId(id:String)
     {
@@ -21,6 +21,19 @@ final class Helper {
     }
   
     
+    func saveNewId(id:Int)
+    {
+        let def = UserDefaults.standard
+        def.setValue(id, forKey: "uid")
+        def.synchronize()
+    }
+    
+    
+    func getNewId()-> Int?{
+        let def = UserDefaults.standard
+        return def.object(forKey: "uid" ) as? Int
+    }
+  
     
     func saveRole(role:String)
     {
@@ -98,5 +111,29 @@ final class Helper {
     
     
     
+    func saveUserToken(user_picture:String)
+    {
+        let def = UserDefaults.standard
+        def.setValue(user_picture, forKey: "token")
+        def.synchronize()
+    }
+    
+    
+    func getUserToken()-> String?{
+        let def = UserDefaults.standard
+        return def.object(forKey: "token" ) as? String
+    }
+    func saveUserTokenfForGuest(user_picture:String)
+    {
+        let def = UserDefaults.standard
+        def.setValue(user_picture, forKey: "tokeng")
+        def.synchronize()
+    }
+    
+    
+    func getUserTokenForGuest()-> String?{
+        let def = UserDefaults.standard
+        return def.object(forKey: "tokeng" ) as? String
+    }
 }
 

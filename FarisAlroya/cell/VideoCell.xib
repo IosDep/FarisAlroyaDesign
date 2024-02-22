@@ -12,27 +12,24 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qPm-DG-mwH" customClass="VideoCell" customModule="FarisAlroya" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="178" height="270"/>
+            <rect key="frame" x="0.0" y="0.0" width="122" height="172"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s3G-o5-TfT">
-                <rect key="frame" x="0.0" y="0.0" width="178" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="122" height="172"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gqk-wO-pT1">
-                        <rect key="frame" x="0.0" y="0.0" width="178" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="122" height="172"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q3e-qd-2DX">
-                                <rect key="frame" x="0.0" y="0.0" width="178" height="270"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoss" translatesAutoresizingMaskIntoConstraints="NO" id="q3e-qd-2DX">
+                                <rect key="frame" x="0.0" y="0.0" width="122" height="172"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="270" id="gVU-xT-bP7"/>
+                                    <constraint firstAttribute="height" constant="172" id="NaI-xm-RlK"/>
                                 </constraints>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra7-Bw-ILZ">
-                                <rect key="frame" x="15" y="18" width="10.333333333333336" height="30"/>
+                                <rect key="frame" x="15" y="18" width="10.333333333333336" height="20.333333333333329"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="A02-yH-v9v"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -43,7 +40,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeA-Ig-FeW">
-                                <rect key="frame" x="159.66666666666666" y="187" width="10.333333333333343" height="71"/>
+                                <rect key="frame" x="103.66666666666667" y="139.66666666666666" width="10.333333333333329" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -51,37 +48,40 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="q3e-qd-2DX" secondAttribute="bottom" id="A5P-Qf-A18"/>
-                            <constraint firstItem="jeA-Ig-FeW" firstAttribute="top" secondItem="Gqk-wO-pT1" secondAttribute="top" constant="187" id="NsE-Cp-wCQ"/>
+                            <constraint firstAttribute="width" constant="122" id="5Ao-1O-m5D"/>
+                            <constraint firstItem="q3e-qd-2DX" firstAttribute="top" secondItem="Gqk-wO-pT1" secondAttribute="top" id="5V4-Vq-YYx"/>
+                            <constraint firstAttribute="bottom" secondItem="q3e-qd-2DX" secondAttribute="bottom" id="5pf-Pn-aMz"/>
+                            <constraint firstAttribute="height" constant="172" id="Dgz-5L-PL3"/>
                             <constraint firstItem="Ra7-Bw-ILZ" firstAttribute="leading" secondItem="Gqk-wO-pT1" secondAttribute="leading" constant="15" id="OBA-I3-u8Y"/>
                             <constraint firstAttribute="trailing" secondItem="jeA-Ig-FeW" secondAttribute="trailing" constant="8" id="V0K-qk-M55"/>
-                            <constraint firstAttribute="height" constant="270" id="bIw-AT-IVA"/>
                             <constraint firstItem="q3e-qd-2DX" firstAttribute="leading" secondItem="Gqk-wO-pT1" secondAttribute="leading" id="csl-3Y-rCg"/>
                             <constraint firstAttribute="bottom" secondItem="jeA-Ig-FeW" secondAttribute="bottom" constant="12" id="czx-Tg-E5W"/>
-                            <constraint firstAttribute="trailing" secondItem="q3e-qd-2DX" secondAttribute="trailing" id="oBr-G8-f0V"/>
+                            <constraint firstAttribute="trailing" secondItem="q3e-qd-2DX" secondAttribute="trailing" id="mWz-PF-IEH"/>
                             <constraint firstItem="q3e-qd-2DX" firstAttribute="top" secondItem="Gqk-wO-pT1" secondAttribute="top" id="tiy-To-kC7"/>
+                            <constraint firstAttribute="bottom" secondItem="q3e-qd-2DX" secondAttribute="bottom" id="tvi-Sq-EKx"/>
                             <constraint firstItem="Ra7-Bw-ILZ" firstAttribute="top" secondItem="Gqk-wO-pT1" secondAttribute="top" constant="18" id="zOC-2y-LLp"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Gqk-wO-pT1" secondAttribute="bottom" id="8da-dy-GC5"/>
                     <constraint firstAttribute="trailing" secondItem="Gqk-wO-pT1" secondAttribute="trailing" id="LTA-tO-trs"/>
                     <constraint firstItem="Gqk-wO-pT1" firstAttribute="leading" secondItem="s3G-o5-TfT" secondAttribute="leading" id="RCQ-xK-uOG"/>
+                    <constraint firstAttribute="bottom" secondItem="Gqk-wO-pT1" secondAttribute="bottom" id="Ywa-9o-bVm"/>
                     <constraint firstItem="Gqk-wO-pT1" firstAttribute="top" secondItem="s3G-o5-TfT" secondAttribute="top" id="nih-td-5Uj"/>
                 </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="164" height="270"/>
+            <size key="customSize" width="108" height="172"/>
             <connections>
                 <outlet property="images" destination="q3e-qd-2DX" id="C44-4M-NYo"/>
                 <outlet property="numb" destination="jeA-Ig-FeW" id="Hdx-mt-3fy"/>
                 <outlet property="status" destination="Ra7-Bw-ILZ" id="WgB-ev-PB4"/>
                 <outlet property="videoPlayerView" destination="q3e-qd-2DX" id="2vM-03-ewF"/>
             </connections>
-            <point key="canvasLocation" x="729.7709923664122" y="-176.7605633802817"/>
+            <point key="canvasLocation" x="687.02290076335873" y="-211.26760563380282"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="logoss" width="1024" height="1024"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

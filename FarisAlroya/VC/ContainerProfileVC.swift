@@ -21,7 +21,7 @@ class ContainerProfileVC: UIPageViewController , UIPageViewControllerDelegate , 
         
         vc1?.flag = 1
         
-       let vc2 = storyBoard.instantiateViewController(withIdentifier: "UserProfileVC") as? UserProfileVC
+       let vc2 = storyBoard.instantiateViewController(withIdentifier: "SaveViewController") as? SaveViewController
         
         vc2?.flag = 2
         

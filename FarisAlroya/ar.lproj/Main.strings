@@ -12,7 +12,7 @@
 "0oj-Jp-Pwa.text" = "Email";
 
 /* Class = "UITextField"; placeholder = "enter password"; ObjectID = "10m-Rd-quH"; */
-"10m-Rd-quH.placeholder" = "enter password";
+"10m-Rd-quH.placeholder" = "كلمة المرور";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1IR-2d-xfB"; */
 "1IR-2d-xfB.normalTitle" = "Button";
@@ -24,7 +24,7 @@
 "1iU-tL-jgc.normalTitle" = "Button";
 
 /* Class = "UITextField"; placeholder = "enter username \\ phone number"; ObjectID = "2KW-NV-ssZ"; */
-"2KW-NV-ssZ.placeholder" = "enter username \\ phone number";
+"2KW-NV-ssZ.placeholder" = "اسم المستخدم او رقم الهاتف";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "38g-kA-1i5"; */
 "38g-kA-1i5.normalTitle" = "Button";
@@ -309,7 +309,7 @@
 "d7X-1K-uTh.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Data panel\n"; ObjectID = "dAA-lM-FXI"; */
-"dAA-lM-FXI.text" = "Data panel\n";
+"dAA-lM-FXI.text" = "الاعجابات";
 
 /* Class = "UILabel"; text = "Number of band members\n"; ObjectID = "dHX-6I-Xhj"; */
 "dHX-6I-Xhj.text" = "Number of band members\n";
@@ -396,7 +396,7 @@
 "mBs-wi-4tA.text" = "Last name";
 
 /* Class = "UITextField"; placeholder = "enter password"; ObjectID = "q1J-ZG-Ca3"; */
-"q1J-ZG-Ca3.placeholder" = "enter password";
+"q1J-ZG-Ca3.placeholder" = "كلمة المرور";
 
 /* Class = "UIButton"; configuration.title = "Create Account"; ObjectID = "q42-bU-usP"; */
 "q42-bU-usP.configuration.title" = "Create Account";
@@ -417,7 +417,7 @@
 "r0c-Fv-AIK.text" = "Confirm password";
 
 /* Class = "UITextField"; placeholder = "enter username"; ObjectID = "r4I-OX-QVg"; */
-"r4I-OX-QVg.placeholder" = "enter username";
+"r4I-OX-QVg.placeholder" = "اسم المستخدم";
 
 /* Class = "UIButton"; configuration.title = "choose gender"; ObjectID = "rLR-S9-W04"; */
 "rLR-S9-W04.configuration.title" = "choose gender";

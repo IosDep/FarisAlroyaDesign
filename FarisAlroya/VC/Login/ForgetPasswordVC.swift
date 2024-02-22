@@ -9,6 +9,7 @@ import UIKit
 
 class ForgetPasswordVC: UIViewController {
 
+    @IBOutlet weak var txt: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +17,21 @@ class ForgetPasswordVC: UIViewController {
     
 
     @IBAction func sendCodePressed(_ sender: Any) {
-        
-        
-        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "OTPLoginVC") as! OTPLoginVC
-        
-        
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        if self.txt.text == "" {
+            self.showErrorHud(msg: "يحب كتابة رقم الهاتف او البريد الالكتروني")
+            
+        }else{
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.notLogin()
+            }
+            
+            
+//        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        let vc = storyBoard.instantiateViewController(withIdentifier: "OTPLoginVC") as! OTPLoginVC
+//
+//
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true)
     }
     
   

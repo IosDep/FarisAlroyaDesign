@@ -24,7 +24,6 @@ class DesignableLabel: UILabel {
         }
         set(value) {
             self.text = NSLocalizedString(value, comment: "")
-            
         }
     }
 }
@@ -46,7 +45,7 @@ class DesignableLabel2: UILabel {
             return self.text!
         }
         set(value) {
-            self.textAlignment = MOLHLanguage.isRTLLanguage() ? .right : .left
+            self.textAlignment = .right
             self.text = NSLocalizedString(value, comment: "")
             
             
@@ -71,7 +70,7 @@ class DesignableLabelWitSpace: UILabel {
             return self.text!
         }
         set(value) {
-            self.textAlignment = MOLHLanguage.isRTLLanguage() ? .right : .left
+            self.textAlignment = .right
             self.text = NSLocalizedString(value, comment: "")
             
             // Set the font to "Poppins-Medium"
@@ -105,7 +104,7 @@ class DesignableTextFeild: UITextField {
             self.layer.borderColor = UIColor.lightGray.cgColor
             self.layer.cornerRadius = 5
             self.layer.borderWidth = 1
-            self.textAlignment = MOLHLanguage.isRTLLanguage() ? .right : .left
+            self.textAlignment = .right
             if MOLHLanguage.isRTLLanguage() == true {
                 self.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
                 self.rightViewMode = .always
@@ -139,7 +138,7 @@ class DesignableTextFeild2: UITextField {
         set(value) {
             self.attributedPlaceholder =  NSAttributedString(string: NSLocalizedString(value.localized(), comment: ""), attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
             
-            self.textAlignment = MOLHLanguage.isRTLLanguage() ? .right : .left
+            self.textAlignment = .right
             if MOLHLanguage.isRTLLanguage() == true {
                 self.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
                 self.rightViewMode = .always
@@ -171,8 +170,8 @@ class DesignableTextFeild3: UITextField {
         }
         set(value) {
             self.attributedPlaceholder =  NSAttributedString(string: NSLocalizedString(value.localized(), comment: ""), attributes: [NSAttributedString.Key.foregroundColor : UIColor.black])
-            
-            self.textAlignment = MOLHLanguage.isRTLLanguage() ? .right : .left
+            self.textAlignment = .right
+            self.textAlignment = .right
             if MOLHLanguage.isRTLLanguage() == true {
                 self.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
                 self.rightViewMode = .always
@@ -204,7 +203,7 @@ class DesignableTextFeild4: UITextField {
         set(value) {
             self.attributedPlaceholder =  NSAttributedString(string: NSLocalizedString(value.localized(), comment: ""), attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
             
-            self.textAlignment = MOLHLanguage.isRTLLanguage() ? .right : .left
+            self.textAlignment = .right
             if MOLHLanguage.isRTLLanguage() == true {
                 self.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
                 self.rightViewMode = .always

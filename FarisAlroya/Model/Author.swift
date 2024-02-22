@@ -7,7 +7,12 @@
 
 import Foundation
 struct Author: Codable {
-    let uid: String?
+    
+    let numOfFollowers: String?
+    let numOfFollowing: String?
+    let numOfLikes : String?
+
+    let uid: Int?
     let username: String?
     let type: String?
     let profile_data: ProfileData?
@@ -18,6 +23,7 @@ struct ProfileData: Codable {
     let user_picture: String?
     let band_name: String?
     let mail: String?
-
+    let birth_date: String?
+    let gender: String?
 
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="268" id="KGk-i7-Jjw" customClass="LiveVideoTabelView" customModule="FarisAlroya" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="268"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="268"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P9n-O1-EzC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="268"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CMZ-p1-djv">
+                        <rect key="frame" x="10" y="167.33333333333334" width="293.33333333333331" height="80.333333333333343"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdh-qY-3df">
+                                <rect key="frame" x="0.0" y="0.0" width="293.33333333333331" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSE-Wv-qhD">
+                                <rect key="frame" x="0.0" y="60.000000000000007" width="293.33333333333331" height="20.333333333333336"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.329999999999998" id="JTs-MC-AGw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Background"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hdh-qY-3df" secondAttribute="trailing" id="d3i-0R-Hfv"/>
+                            <constraint firstAttribute="trailing" secondItem="NSE-Wv-qhD" secondAttribute="trailing" id="wg0-ia-7ue"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CMZ-p1-djv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="2C7-QI-9nV"/>
+                    <constraint firstItem="P9n-O1-EzC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IHR-GQ-Rce"/>
+                    <constraint firstAttribute="bottom" secondItem="P9n-O1-EzC" secondAttribute="bottom" id="djC-lI-c88"/>
+                    <constraint firstAttribute="trailing" secondItem="P9n-O1-EzC" secondAttribute="trailing" id="hO8-j5-lMl"/>
+                    <constraint firstAttribute="trailing" secondItem="CMZ-p1-djv" secondAttribute="trailing" constant="16.670000000000002" id="s4v-Z3-Iwr"/>
+                    <constraint firstAttribute="bottom" secondItem="CMZ-p1-djv" secondAttribute="bottom" constant="20.329999999999998" id="tuj-bC-4JD"/>
+                    <constraint firstItem="P9n-O1-EzC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ugg-EG-2rw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imagUser" destination="P9n-O1-EzC" id="0Ed-h2-zwe"/>
+                <outlet property="lblUserName" destination="hdh-qY-3df" id="rX7-y2-U0d"/>
+                <outlet property="otherTxt" destination="NSE-Wv-qhD" id="YMQ-1g-1JW"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="67.605633802816911"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

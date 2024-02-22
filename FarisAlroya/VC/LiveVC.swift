@@ -16,5 +16,13 @@ class LiveVC: UIViewController {
     
 
     
-
+    @IBAction func reelsPressed(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "ContainerPageVC") as! ContainerPageVC
+    
+        self.navigationController?.pushViewController(vc, animated: false)
+    
+    }
+    
 }

@@ -21,14 +21,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اليوم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IY9-Xi-c6O">
-                    <rect key="frame" x="5" y="5" width="477" height="116"/>
+                    <rect key="frame" x="5" y="5" width="477" height="108"/>
                     <fontDescription key="fontDescription" name="DINNextLTW23-Bold2" family="DIN Next LT W23" pointSize="14"/>
                     <color key="textColor" red="0.16078431369999999" green="0.18823529410000001" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFs-4k-oWc">
                     <rect key="frame" x="0.0" y="121" width="487" height="1"/>
-                    <color key="backgroundColor" red="0.4431372549" green="0.4823529412" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="3EG-hE-KEg"/>
                     </constraints>
@@ -40,7 +40,7 @@
                 <constraint firstItem="IY9-Xi-c6O" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="1ZP-T6-B2O"/>
                 <constraint firstItem="IY9-Xi-c6O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="915-KI-pV6"/>
                 <constraint firstItem="oFs-4k-oWc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="A97-25-zAt"/>
-                <constraint firstItem="oFs-4k-oWc" firstAttribute="top" secondItem="IY9-Xi-c6O" secondAttribute="bottom" id="TJE-Vb-Zy9"/>
+                <constraint firstItem="oFs-4k-oWc" firstAttribute="top" secondItem="IY9-Xi-c6O" secondAttribute="bottom" constant="8" id="TJE-Vb-Zy9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IY9-Xi-c6O" secondAttribute="trailing" constant="5" id="Wyq-Af-H8W"/>
                 <constraint firstAttribute="bottom" secondItem="oFs-4k-oWc" secondAttribute="bottom" id="ocr-Qc-A03"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oFs-4k-oWc" secondAttribute="trailing" id="wzK-9O-is7"/>

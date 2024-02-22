@@ -23,7 +23,7 @@ class CustomeTabBar: UITabBarController, UITabBarControllerDelegate {
             
         } else {
             UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)
-            UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.lightGray], for: .normal)
+            UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.lightGray], for: .normal) 
             tabBar.barTintColor = .white
         }
         

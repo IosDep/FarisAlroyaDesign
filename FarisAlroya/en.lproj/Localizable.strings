@@ -1,7 +1,155 @@
-/* 
-  Localizable.strings
+/*
+ Localizable.strings
   FarisAlroya
 
   Created by Blue Ray on 12/11/2023.
   
 */
+
+"Poet" = "مستخدم";
+"Guest" = "زائر";
+"Personal Information" = "بياناتك الشخصية";
+"Other Information" = "معلومات أخرى";
+"Registration" = "التسجيل";
+"Enter Data" = "ادخال البيانات";
+"Enter your personal information below, then click “Next” to continue registration." = "ادخل بياناتك الشخصية التالية ثم اضغط “التالي” لمتابعة التسجيل.";
+"poet" = "شاعر فردي";
+"band" = "فرقة";
+"First name" = "الاسم الأول";
+"Last name" = " العائلة";
+"Country" = "بلد الإقامة";
+"choose nationality" = "اختر الجنسية";
+"Gender" = "الجنس";
+"Birthday date" = "تاريخ الميلاد";
+"Next" = "التالي";
+"Do you have an account ?  Sign in" = "هل لديك حساب؟ تسجيل دخول";
+"Name" = "اسم الفرقة";
+"enter your name" = "ادخل الإسم";
+"enter country" = "ادخل الدولة";
+"Number of band members
+" = "عدد الفرقة";
+"Activities type" = "";
+"Choose your favorite activities" = "";
+"Enter the following information, then click “Create an account”
+" = "ادخل المعلومات التالية ثم اضغط “انشاء حساب”";
+"username" = "اسم المستخدم";
+"enter username" = "ادخل اسم المستخدم";
+"Password" = "كلمة المرور";
+"enter password" = "ادخل كلمة المرور";
+"Confirm password" = "تأكيد كلمة المرور";
+"enter confirmed password" = " تأكيد كلمة المرور";
+"Phone number" = "ادخل رقم الهاتف";
+"enter phone numnber" = "ادخل رقم الهاتف";
+"email (optional)" = "البريد الإلكتروني (اختياري)";
+"enter email" = "ادخل بريدك الإلكتروني";
+"Create account" = "انشاء الحساب";
+"Sign in " = "تسجيل دخول";
+"Sign in" = "تسجيل دخول";
+
+"Welcome back !" = "مرحباً بك مجدداً!";
+"username \ phone number" = "اسم المستخدم / الرقم" ;
+"Password" = "كلمة المرور" ;
+"enter password" = "ادخل كلمة المرور" ;
+"Forgot your password?" = "هل نسيت كلمة المرور؟" ;
+
+"Change password" = "تغيير كلمة المرور" ;
+"phone number / email" = "الرقم او البريد الإلكتروني" ;
+"Send Code" = "ارسل الرمز" ;
+"Create an account" = "إنشاء حساب" ;
+"Enter Code" = "ارسل الرمز" ;
+"Enter code that was sent to mobile number" = "ادخل الرمز الذي تم ارساله الى الرقم
+";
+"Create new password" = "تعيين كلمة مرور جديده";
+"new password" = "كلمه المرور الجديده";
+"confirm new password" = "اعاده ادخال كلمة المرور الجديدة";
+"Change password" ="تغيير كلمه المرور";
+"Account Settings" = "اعدادات الحساب";
+"account settings" = "إعدادات الحساب";
+"Change profile image" = "تعيين/تعديل الصورة";
+"Name" = "الاسم";
+"enter name" = "ادخل الإسم";
+"Age" = "العمر";
+"enter age" = "ادخل العمر";
+"Nationality" = "الجنسية";
+"enter nationality" = "ادخل الجنسية";
+"Country" = "دولة الإقامة";
+"enter country" = "اختر الدولة";
+"Phone number" = "رقم الهاتف";
+"enter phone number" = "ادخل رقم الموبايل";
+"Email" = "البريد الإلكتروني";
+"enter email" = "ادخل الريد الالكتروني";
+"Password" = "كلمة المرور";
+"enter password" = "ادخل كلمة المرور";
+"Change password" = "تغيير كلمة المرور";
+"Save" = "حفظ";
+"Cancel" = "الغاء";
+"Your channel" = "قناتك";
+"Analytics" = "الاحصاءات";
+"Content" = "المحتوى";
+"Data panel" = "الاعجابات";
+"enter username / phone number" = "ادخل اسم المستخدم / رقم الموبايل";
+"username / phone number" = "اسم المستخدم / رقم الموبايل" ;
+"choose country" = "اختر بلد الإقامة";
+"welcome" = "أهلا بك";
+"Ypu don't have an account?Create an account" = "ما عندك حساب؟ إنشاء حساب";
+"username" = "اسم المستخدم";
+"password" = "كلمة المرور";
+"Do youhave an account?Sign in" = "هل لديك حساب؟ تسجيل دخول";
+"Gender:" = ":الجنس";
+"Birth date" = "تاريخ الميلاد";
+"Male" = "ذكر";
+"Female" = "أنثى";
+"I agree to the terms and conditions, and acknowledge that my use of this application is subject to compliance with the stated terms, policies and guidelines." =
+"أوافق على الشروط والأحكام، وأقر بأن استخدامي لهذا التطبيق يخضع للامتثال للشروط والسياسات والإرشادات المعلنة اضغط للاطلاع";
+"Confirm account information" = "تأكيد معلومات الحساب";
+"Not now" = "ليس الآن";
+"Enter Account Info" = "ادخل معلومات الحساب";
+
+"Please confirm the code that sent to the mobile number" = "الرجاء تأكيد الرمز الذي تم إرساله إلى هاتفك المحمول ";
+
+"Enter Verification Code" = "ادخال رمز التحقق";
+"Create New Password" = "تعيين كلمة مرور الجديدة";
+"Follow" = "متابعة";
+"Unfollow" = "إلغاء متابعة";
+"Share Account" = "مشاركة الحساب";
+"Wallet" = "المحفظة والشحن" ;
+"Privacy and security" = "الخصوصية والأمن";
+"Account Control" = "التحكم بالحساب";
+"username" = "اسم المستخدم";
+"Gender" = "الجنس";
+"email" = "البريد الالكتروني";
+"Phone number" = "رقم الهاتف";
+"Your personal data is secured and is not shared to other applications" = "بياناتك الشخصية مؤمنة ولا تتم مشاركتها عبر التطبيقات";
+"Private Account" = "حساب خاص ";
+"Account Activity" = "نشاط الحساب";
+"block accounts" = "المحظورين";
+"Account security" = "" ;
+"change password" = "";
+"Two-factor authentication" = "";
+"Live" = "لايف";
+"Videos" ="مقاطع ُفيديو";
+"Account settings" = "إعدادات الحساب";
+"Add information about your video.Maximum characters is 40,000 " = "اضف بعض المعلومات عن الفيديو الخاص بك
+اضف بعض المعلومات عن الفيديو الخاص بك
+الحد الاقصى 40000 حرف";
+"Choose activity type :" = "اختار نوع النشاط:";
+"Allow comments" = "السماح للتعليقات";
+"share with" = "شارك مع";
+"Upload" = "تحميل";
+"Draft" = "المسودة";
+"Likes" = "الاعجاب";
+"Comments" = "التعليقات";
+"Live Notifications" = "اشعارات البث المباشر";
+"Disable Live Notifications" ="ايقاف اشعارات البث المباشر";
+"Notifications" = "الإشعارات";
+"Followers" = "متابع";
+"Following" = "يتابع" ;
+"Reels" = "ريلز";
+"Please fill required data" = "املئ جميع الحقول المطلوبة";
+"Interests" = "اهتمامات";
+"Please fill invalid mobile number" = "يرجى ادخال رقم موبايل صحيح";
+"Update" = "تحديث" ;
+"Delete My Accounts" = "حذف حسابي";
+"Please Wait" =  "يرجى الانتظار";
+"nodata" =  "ستظهر فيديوهاتك هنااضف بعض الفيديوهات" ;
+"Back"  =   "رجوع" ;

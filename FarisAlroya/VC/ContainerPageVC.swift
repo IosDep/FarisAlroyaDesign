@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+//import SendbirdUIKit
+//import SendbirdLiveUIKit
 class ContainerPageVC: UIPageViewController , UIPageViewControllerDelegate , UIPageViewControllerDataSource {
     
     var containersVC = [UIViewController]()
@@ -14,12 +15,16 @@ class ContainerPageVC: UIPageViewController , UIPageViewControllerDelegate , UIP
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+//        let eventListVC = LiveEventListViewController()
 
-        let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "MainPage") as? MainPage
+        let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "VidViewController") as? VidViewController
+         
+         
+        vc1?.isHome =  0
+       let vc2 = self.storyboard?.instantiateViewController(withIdentifier: "LiveListNewViewController") as? LiveListNewViewController
         
-       let vc2 = self.storyboard?.instantiateViewController(withIdentifier: "LiveVC") as? LiveVC
         
+        self.view.backgroundColor = .clear
         containersVC.append(vc1!)
         containersVC.append(vc2!)
         

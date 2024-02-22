@@ -42,7 +42,7 @@ class AccountSettingsVC: UIViewController,UINavigationControllerDelegate ,UIImag
            anim.center = self.view.center
 
            // Configure animation properties
-           anim.contentMode = .scaleAspectFill
+           
            anim.loopMode = .loop
 
            // Add it to your view
@@ -76,6 +76,7 @@ class AccountSettingsVC: UIViewController,UINavigationControllerDelegate ,UIImag
     @IBAction func logouts(_ sender: Any) {
         
         Helper.shared.saveId(id: "0")
+        Helper.shared.saveUserToken(user_picture: "")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.notLogin()
         

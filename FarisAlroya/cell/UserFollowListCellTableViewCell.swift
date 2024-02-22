@@ -18,6 +18,8 @@ class UserFollowListCellTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var username: UILabel!
     
+    @IBOutlet weak var unFollowBtn: DesignableButton!
+    @IBOutlet weak var followBtn: DesignableButton!
     override func awakeFromNib() {
         super.awakeFromNib()
     }

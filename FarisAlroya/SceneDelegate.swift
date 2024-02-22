@@ -17,6 +17,63 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        if let incomingURL = userActivity?.webpageURL {
+            handleIncomingURL(url: incomingURL)
+        }
+
+    }
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else {
+            return
+        }
+
+        // Parse the URL and extract the path or parameters you need
+        let path = url.path
+
+        // Assuming your URL might look like "com.ob.Kanz://video/123"
+        if path.contains("/video/") {
+            let videoID = path.replacingOccurrences(of: "/video/", with: "")
+            
+            // Now navigate to the specific page in your app
+            // This example assumes you have a method to handle the navigation
+            navigateToVideoPage(withID: videoID)
+        }
+    }
+
+    func navigateToVideoPage(withID videoID: String) {
+        // Logic to navigate to the video page
+        // This might involve setting the rootViewController of the window
+        // or pushing a new view controller onto a navigation stack
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "OneVideoPlay") as! OneVideoPlay
+    
+        vc.videoPlay = videoID
+   
+
+//            self.navigationController?.pushViewController(vc, animated: true)
+    
+        self.window?.rootViewController = vc
+
+        
+    }
+
+
+    
+    func handleIncomingURL(url: URL) {
+        let urlString = url.absoluteString
+        guard let urlComponents = URLComponents(string: urlString),
+              let scheme = urlComponents.scheme,
+              scheme == "com.ob.Kanz",
+              let host = urlComponents.host,
+              host == "videos",
+              let videoID = urlComponents.path.components(separatedBy: "/").last else {
+            return
+        }
+        
+        // Now you have the videoID, navigate to the appropriate screen in your app
+        print("Open video with ID: \(videoID)")
+        // Implement navigation to the video based on your app's structure
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

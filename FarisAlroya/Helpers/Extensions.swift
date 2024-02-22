@@ -8,11 +8,136 @@
 import UIKit
 import JGProgressHUD
 import Loaf
+import MOLH
 
-
+import Alamofire
 extension UIViewController {
     
     
+    
+    func addRemoveFlagActionSaved(entity_id:String,entity_type:String,flag_id:String, completionHandler: @escaping ((Bool) -> Void)) {
+
+
+        let favouriteUrl = URL(string: ServerConstants.BASE_URL + "/user/saveOrCancelSaveVideo")
+            let favouriteParam: [String: Any] = [
+                
+                
+                "video_id": entity_id,
+
+            ]
+            
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(Helper.shared.getUserToken() ?? "")",
+            
+          ]
+        
+        print("ASDADD",Helper.shared.getUserToken())
+    
+            AF.request(favouriteUrl!, method: .post, parameters: favouriteParam,headers: headers).response { (response) in
+                if response.error == nil {
+                    do {
+                        let jsonObj = try JSONSerialization.jsonObject(with: response.data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String: Any]
+                        
+                        if jsonObj != nil {
+                            
+                            let msg = jsonObj!["msg"] as? [String:Any]
+                           let message = jsonObj!["message"] as? String
+
+                            if let status = msg?["status"] as? Int {
+                                if status == 200 {
+                                    DispatchQueue.main.async {
+                                        
+                                        completionHandler(true)
+                                    }
+                                    
+                                    
+                                    
+                                } else {
+                                    
+                                        DispatchQueue.main.async {
+                                            
+                                            
+                                            completionHandler(false)
+                                        }
+                                    
+                                }
+                            }
+                        }
+                        
+                    } catch let err as NSError {
+                        print("Error: \(err)")
+                        
+                    }
+                } else {
+                    print("Error")
+                    
+                }
+            }
+        }
+    
+    
+    func addRemoveFlagActionLike(entity_id:String,entity_type:String,flag_id:String, completionHandler: @escaping ((Bool) -> Void)) {
+
+      
+            
+        let favouriteUrl = URL(string: ServerConstants.BASE_URL +  "/user/likeOrUnlikeVideo")
+
+            let favouriteParam: [String: Any] = [
+                
+                
+                "video_id":  entity_id,
+                
+
+            ]
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(Helper.shared.getUserToken() ?? "")",
+            
+
+          ]
+            
+            AF.request(favouriteUrl!, method: .post, parameters: favouriteParam,headers: headers).response { (response) in
+                if response.error == nil {
+                    do {
+                        let jsonObj = try JSONSerialization.jsonObject(with: response.data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String: Any]
+                        
+                        if jsonObj != nil {
+                            
+                            let msg = jsonObj!["msg"] as? [String:Any]
+                           let message = jsonObj!["message"] as? String
+
+                            if let status = msg?["status"] as? Int {
+                                if status == 200 {
+                                    DispatchQueue.main.async {
+                                        
+                                        completionHandler(true)
+                                    }
+                                    
+                                    
+                                    
+                                    
+                                } else {
+                                    
+                                        DispatchQueue.main.async {
+                                            
+                                            
+                                            
+                                            completionHandler(false)
+                                        }
+                                    
+                                }
+                            }
+                        }
+                        
+                    } catch let err as NSError {
+                        print("Error: \(err)")
+                        
+                    }
+                } else {
+                    print("Error")
+                    
+                }
+            }
+        }
     
     func showErrorHud(msg: String , hud: JGProgressHUD) {
         let hud = JGProgressHUD(style: .light)
@@ -22,7 +147,54 @@ extension UIViewController {
         hud.dismiss(afterDelay: 1.5)
     }
     
+    func showErrorHud(msg: String ) {
+        let hud = JGProgressHUD(style: .light)
+        hud.textLabel.text = msg
+        hud.indicatorView = JGProgressHUDErrorIndicatorView()
+        hud.show(in: self.view)
+        hud.dismiss(afterDelay: 1.5)
+    }
+    func showSuccessHud(msg: String ) {
+        let hud = JGProgressHUD(style: .light)
+        hud.textLabel.text = msg
+        hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        hud.show(in: self.view)
+        hud.dismiss(afterDelay: 1.5)
+    }
     
+    func removeHyphens(from string: String) -> String {
+        return string.replacingOccurrences(of: "-", with: "")
+    }
+    func showNoDataLabel(message: String = "No Data", inView view: UIView,wnatShow: Bool = true) {
+        if wnatShow == true {
+            let noDataLabel = UILabel()
+            noDataLabel.text = message
+            noDataLabel.textColor = UIColor.systemBlue
+            noDataLabel.textAlignment = .center
+            noDataLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+            view.addSubview(noDataLabel)
+
+            NSLayoutConstraint.activate([
+                noDataLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                noDataLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                noDataLabel.widthAnchor.constraint(equalTo: view.widthAnchor),
+                noDataLabel.heightAnchor.constraint(equalToConstant: 50)
+            ])
+            
+        }else {
+            view.removeFromSuperview()
+        }
+    
+       }
+    
+    func makeShadow(mainView:UIView){
+        mainView.layer.shadowColor = UIColor.black.cgColor
+        mainView.layer.shadowOpacity = 0.5
+        mainView.layer.shadowOffset = CGSize(width: 2, height: 2)
+        mainView.layer.shadowRadius = 5
+        mainView.layer.cornerRadius = 25
+    }
     func serverError(hud: JGProgressHUD) {
         hud.indicatorView = JGProgressHUDErrorIndicatorView()
         hud.textLabel.text = "Server Error".localized()
@@ -39,7 +211,7 @@ extension UIViewController {
                 .custom(
                     .init(
                     backgroundColor:
-                        UIColor(red: 0.18, green: 0.80, blue: 0.44, alpha: 1.00) ,
+                        UIColor(red: 0.13, green: 0.31, blue: 0.15, alpha: 1.00) ,
                     textColor: .white,
                     tintColor: .white,
                     font: UIFont(name: "din-regular", size: 10) ?? .systemFont(ofSize: 10),                    icon: Loaf.Icon.success,
@@ -61,7 +233,7 @@ extension UIViewController {
                 .custom(
                     .init(
                     backgroundColor:
-                        UIColor(red: 0.95, green: 0.77, blue: 0.06, alpha: 1.00),
+                        UIColor(red: 0.16, green: 0.19, blue: 0.34, alpha: 1.00)  ,
                     textColor: .white,
                     tintColor: .white,
                     font: UIFont(name: "din-regular", size: 14) ?? .systemFont(ofSize: 10),                    icon: Loaf.Icon.warning,
@@ -73,6 +245,8 @@ extension UIViewController {
              sender: self)
         .show()    }
     
+
+    
     func showWarningHud(msg: String) {
         //        hud.indicatorView = JGProgressHUDSuccessIndicatorView()
         //        hud.textLabel.text = msg
@@ -82,10 +256,11 @@ extension UIViewController {
                 .custom(
                     .init(
                     backgroundColor:
-                        UIColor(red: 0.95, green: 0.77, blue: 0.06, alpha: 1.00),
+                        UIColor(red: 0.16, green: 0.19, blue: 0.34, alpha: 1.00) ,
                     textColor: .white,
                     tintColor: .white,
-                    font: UIFont(name: "din-regular", size: 14) ?? .systemFont(ofSize: 10),                    icon: Loaf.Icon.warning,
+                    font: UIFont(name: "din-regular", size: 14) ?? .systemFont(ofSize: 10),
+                    icon: Loaf.Icon.warning,
                     textAlignment: .natural,
                     iconAlignment: .left ,
                     width: .fixed(300))
@@ -229,4 +404,6 @@ extension UIView {
         // Other label customization code, if needed
         
     }
+    
+    
 }

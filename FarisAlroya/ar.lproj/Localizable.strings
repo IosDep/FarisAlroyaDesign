@@ -1,5 +1,5 @@
 /* 
-  Localizable.strings
+ Localizable.strings
   FarisAlroya
 
   Created by Blue Ray on 12/11/2023.
@@ -86,7 +86,7 @@
 "Your channel" = "قناتك";
 "Analytics" = "الاحصاءات";
 "Content" = "المحتوى";
-"Data panel" = "لوحة البيانات";
+"Data panel" = "الاعجابات";
 "enter username / phone number" = "ادخل اسم المستخدم / رقم الموبايل";
 "username / phone number" = "اسم المستخدم / رقم الموبايل" ;
 "choose country" = "اختر بلد الإقامة";
@@ -99,7 +99,8 @@
 "Birth date" = "تاريخ الميلاد";
 "Male" = "ذكر";
 "Female" = "أنثى";
-"I agree to the terms and conditions, and acknowledge that my use of this application is subject to compliance with the stated terms, policies and guidelines." = "أوافق على الشروط والأحكام، وأقر بأن استخدامي لهذا التطبيق يخضع للامتثال للشروط والسياسات والإرشادات المعلنة.";
+"I agree to the terms and conditions, and acknowledge that my use of this application is subject to compliance with the stated terms, policies and guidelines." =
+"أوافق على الشروط والأحكام، وأقر بأن استخدامي لهذا التطبيق يخضع للامتثال للشروط والسياسات والإرشادات المعلنة اضغط للاطلاع";
 "Confirm account information" = "تأكيد معلومات الحساب";
 "Not now" = "ليس الآن";
 "Enter Account Info" = "ادخل معلومات الحساب";
@@ -116,7 +117,7 @@
 "Account Control" = "التحكم بالحساب";
 "username" = "اسم المستخدم";
 "Gender" = "الجنس";
-"email" = "لابريد الإلكتروني";
+"email" = "البريد الالكتروني";
 "Phone number" = "رقم الهاتف";
 "Your personal data is secured and is not shared to other applications" = "بياناتك الشخصية مؤمنة ولا تتم مشاركتها عبر التطبيقات";
 "Private Account" = "حساب خاص ";
@@ -125,7 +126,7 @@
 "Account security" = "" ;
 "change password" = "";
 "Two-factor authentication" = "";
-"Live" = "البث المباشر";
+"Live" = "لايف";
 "Videos" ="مقاطع ُفيديو";
 "Account settings" = "إعدادات الحساب";
 "Add information about your video.Maximum characters is 40,000 " = "اضف بعض المعلومات عن الفيديو الخاص بك
@@ -143,3 +144,12 @@
 "Notifications" = "الإشعارات";
 "Followers" = "متابع";
 "Following" = "يتابع" ;
+"Reels" = "ريلز";
+"Please fill required data" = "املئ جميع الحقول المطلوبة";
+"Interests" = "اهتمامات";
+"Please fill invalid mobile number" = "يرجى ادخال رقم موبايل صحيح";
+"Update" = "تحديث" ;
+"Delete My Accounts" = "حذف حسابي";
+"Please Wait" =  "يرجى الانتظار";
+"nodata" =  "ستظهر فيديوهاتك هنااضف بعض الفيديوهات" ;
+"Back"  =   "رجوع" ;
